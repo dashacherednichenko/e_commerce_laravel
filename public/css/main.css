@@ -1,0 +1,297 @@
+/*basis ---------------------------------------------------- start*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+*:focus{outline: none;}
+
+button:focus{outline: none;}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 1.4em;
+    font-family: Roboto, "Open Sans", "Open-Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(68, 79, 87, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: rgba(68, 79, 87, 0.8);
+    text-decoration: none
+}
+
+a:hover {
+    color: rgba(68, 79, 87, 0.8);
+    text-decoration: none;
+}
+
+#container {
+    flex: 1 0 auto;
+}
+#contentContainer {
+    padding-left: 150px;
+    height: calc(100% - 80px);
+}
+/*basis ---------------------------------------------------- end*/
+
+/*nav ---------------------------------------------------- start*/
+.main-navigation {
+    width: 150px;
+    display: inline-block;
+    z-index: 10;
+    position: fixed;
+    /*height: 100%;*/
+    /*min-height: 680px;*/
+    border-right: 1px solid #e6e6e6;
+    text-align: center;
+    background-color: white;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+#sidebar_main {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#sidebar_main > li {
+    border-bottom: 1px solid #e6e6e6;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    position: relative;
+    margin: 0 0px;
+    width: 100%;
+    height: 85px;
+    display: table;
+}
+.sidebar_icon{
+    width: 35px;
+}
+.liNav a {
+    width: 100%;
+    height: 100%;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+}
+.liNav > a:hover {
+    transition: .3s ease-in-out;
+    background-color: #eee;
+    text-decoration: none;
+}
+#sidebar_main .liNav .submenuLeft {
+    display: none;
+    position: fixed;
+    top: 81px;
+    background-color: white;
+    height: 100%;
+    padding-top:20px;
+    border-left: 1px solid #e6e6e6;
+    width: 250px;
+}
+#sidebar_main .liNav .submenuLeft .second {
+    margin-left: 229px;
+    width: calc(100vw - 150px - 250px);
+}
+/*#sidebar_main .liNav .submenuLeftSecond {*/
+/*    display: none;*/
+/*}*/
+
+#sidebar_main .liNav .submenuLeft > .submenuLiLeft {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#sidebar_main .liNav .submenuLeft > .submenuLiLeft > .submenuALeft {
+    width: 100%;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    text-align: left;
+}
+#sidebar_main .liNav .submenuLeft > .submenuLiLeft > .submenuALeft:hover {
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    background-color: #eee;
+    text-decoration: none;
+}
+
+.submenuLeft .sidebar_img {
+    height: 35px;
+}
+#sidebar_main .liNav:hover > .submenuLeft, #sidebar_main .submenuLiLeft:hover > .submenuLeft{
+    display: block;
+}
+
+#sidebar_main .liNav > .submenuLeft > .submenuLiLeft {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*nav ---------------------------------------------------- end*/
+
+/*breadcrumbs ---------------------------------------------------- start*/
+.breadcrumb {
+    background-color: transparent;
+    font-size: 13px;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+/*breadcrumbs ---------------------------------------------------- end*/
+
+
+/*header ---------------------------------------------------- start*/
+header {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    display: table;
+}
+header .left {
+    width: 150px;
+    display: table-cell;
+    height: 80px;
+    vertical-align: middle;
+}
+
+header .right {
+    display: table-cell;
+    width: calc(100% - 150px);
+}
+.headerLogo {
+    display: table-cell;
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.headerLogo img {
+    width: calc(100% - 10%);
+}
+/*header ---------------------------------------------------- end*/
+
+/*footer ---------------------------------------------------- start*/
+footer {
+    flex: 0 0 auto;
+    background-color: #2c3946;
+    /*margin-left: 150px;*/
+    padding-left: 170px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: white;
+    /*width: calc(100% - 150px);*/
+}
+
+.footer_menus {
+    margin: 0px;
+    font-size: 14px;
+}
+.menus__item ul li, .menus__item ul li a{
+    color: #c4c4c4;
+    transition: .3s;
+    font-weight: bold;
+}
+.menus__item ul li a:hover {
+    color: white;
+    text-shadow: 0 0 5px #228DFF, 0 0 10px #228DFF, 0 0 15px #228DFF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+}
+.phones a span{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.footer_logo {
+    width: calc(100% - 20px);
+    vertical-align: top;
+}
+
+footer .block-title {
+    font: 600 18px Arial,sans-serif;
+    margin-bottom: 24px;
+}
+footer .social {
+    margin-top: 20px;
+}
+footer .social_link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+footer .social_link img {
+    width: 40px;
+    vertical-align: top;
+}
+
+footer .social_link:hover {
+    box-shadow: 0 0 5px #00AEEF, 0 0 10px #00AEEF, 0 0 15px #00AEEF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #00AEEF, 0 0 50px #00AEEF, 0 0 75px #00AEEF;
+    background-color: #00AEEF;
+}
+footer .separate {
+    padding-top: 10px;
+    border-top: 1px solid hsla(0,0%,100%,.2);
+}
+footer .separate .copyright {
+    display: inline-block;
+    font: 400 12px Arial,sans-serif;
+    color: #c4c4c4;
+    text-align: center;
+}
+
+footer .visa {
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+
+footer .visa .icons_visa {
+    width: 100px;
+}
+footer .visa .icons_credit_footer{
+    width: 60px;
+}
+/*footer ---------------------------------------------------- end*/
+
+/*button to the top of page---------------------------------------------------- start*/
+footer #top {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    width: 40px;
+    height: 40px;
+    line-height: 34px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+    background-color: #2c3946;
+    box-shadow: 0 2px 10px black;
+    border: none;
+    border-radius: 50%;
+}
+footer #top:hover {
+    color: white;
+    text-shadow: 0 0 5px #228DFF, 0 0 10px #228DFF, 0 0 15px #228DFF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    box-shadow: 0 0 5px #00AEEF, 0 0 10px #00AEEF, 0 0 15px #00AEEF, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #00AEEF, 0 0 50px #00AEEF, 0 0 75px #00AEEF;
+}
+
+/*button to the top of page---------------------------------------------------- end*/
+
